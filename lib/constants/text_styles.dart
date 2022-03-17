@@ -1,0 +1,14 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+
+
+
+class StyledText {
+  static TextStyle get listViewText1 => GoogleFonts.sansita();
+  static TextStyle get  actorFontStyle=> GoogleFonts.oswald();
+
+  static TextStyle get titleBolds =>
+      listViewText1.copyWith(fontWeight: FontWeight.bold);
+}
