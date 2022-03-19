@@ -30,6 +30,7 @@ class TabsView extends StatelessWidget {
 
 return Obx(()=>
     BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
 
       selectedItemColor: Theme.of(Get.context!).bottomNavigationBarTheme.selectedItemColor,
           items:  <BottomNavigationBarItem>[
@@ -42,13 +43,18 @@ return Obx(()=>
             BottomNavigationBarItem(
               
 
-              icon: Icon(Icons.business),
+              icon: Icon(Icons.search),
               label: search,
             ),
             BottomNavigationBarItem(
             backgroundColor: Theme.of(Get.context!).bottomNavigationBarTheme.backgroundColor,
-              icon: Icon(Icons.search),
-              label: 'School',
+              icon: Icon(Icons.add_box),
+              label: addNew,
+            ),
+               BottomNavigationBarItem(
+            backgroundColor: Theme.of(Get.context!).bottomNavigationBarTheme.backgroundColor,
+              icon: Icon(Icons.settings),
+              label: settings,
             ),
           ],
           currentIndex: _controller.currentIndex,

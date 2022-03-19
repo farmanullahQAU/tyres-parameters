@@ -21,7 +21,7 @@ List<TyreModel> get tyresList=>_tyresList;
             TyreModel(
         description: "Short offering descriptions1 goes here....",
         
-        wheel: WheelModel(rimOffset: 41, rimWidth: 83,rimDimeter: 12), type: "Rim", tyreWidth: 34),
+        wheel: WheelModel(rimOffset: 41, rimWidth: 83,rimDimeter: 12), type: "Rim", tyreWidth: 88),
             TyreModel(
         description: "Short offering descriptions2 goes here....",
         
@@ -29,7 +29,39 @@ List<TyreModel> get tyresList=>_tyresList;
             TyreModel(
         description: "Short offering descriptions3 goes here....",
         
-        wheel: WheelModel(rimOffset: 4, rimWidth: 88,rimDimeter: 99), type: "Rim", tyreWidth: 34)
+        wheel: WheelModel(rimOffset: 4, rimWidth: 16,rimDimeter: 99), type: "Rim", tyreWidth: 32),
+           TyreModel(
+        description: "Short offering descriptions3 goes here....",
+        
+        wheel: WheelModel(rimOffset: 1, rimWidth: 12,rimDimeter: 99), type: "Tyre", tyreWidth: 66),
+           TyreModel(
+        description: "Short offering descriptions4 goes here....",
+        
+        wheel: WheelModel(rimOffset: 87, rimWidth: 43,rimDimeter: 90), type: "Wheel", tyreWidth: 12),
+          TyreModel(
+        description: "Short offering descriptions3 goes here....",
+        
+        wheel: WheelModel(rimOffset: 6, rimWidth: 43,rimDimeter: 90), type: "Wheel", tyreWidth: 12),
+          TyreModel(
+        description: "Short offering descriptions3 goes here....",
+        
+        wheel: WheelModel(rimOffset: 4, rimWidth: 43,rimDimeter: 22), type: "RIM", tyreWidth: 85),
+          TyreModel(
+        description: "Short offering descriptions3 goes here....",
+        
+        wheel: WheelModel(rimOffset: 33, rimWidth: 18,rimDimeter: 90), type: "TYRE", tyreWidth: 35),
+          TyreModel(
+        description: "Short offering descriptions3 goes here....",
+        
+        wheel: WheelModel(rimOffset: 4, rimWidth: 43,rimDimeter: 90), type: "Wheel", tyreWidth: 11),
+               TyreModel(
+        description: "Short offering descriptions3 goes here....",
+        
+        wheel: WheelModel(rimOffset: 6, rimWidth: 43,rimDimeter: 90), type: "Wheel", tyreWidth: 12),
+                   TyreModel(
+        description: "Short offering descriptions3 goes here....",
+        
+        wheel: WheelModel(rimOffset: 1, rimWidth: 12,rimDimeter: 99), type: "Tyre", tyreWidth: 66),
     ];
     super.onInit();
   }

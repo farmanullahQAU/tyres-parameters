@@ -17,8 +17,9 @@ class HomeView extends StatelessWidget {
       child: Scaffold(
         floatingActionButton: FloatingActionButton(onPressed: (){},child: Icon(Icons.add),),
         appBar: AppBar(
+          centerTitle: true,
           backgroundColor: Theme.of(context).primaryColor,
-          title: Text("List View"),
+          title: Text("Offers"),
         ),
         body: ListView.builder(
           
@@ -38,12 +39,14 @@ final _tyreModel=_controller.tyresList[index];
       padding: const EdgeInsets.only(top: 8.0),
       child: ExpansionTile(
         subtitle: Text(tyreModel.type),
+
+      
         leading: CircleAvatar(
             backgroundColor: Theme.of(Get.context!).primaryColor,
             radius: 30,
             child: Text(tyreModel.tyreWidth.toString())),
         title: Text(
-          "Status",
+          type.capitalizeFirst??"",
         ),
         children: [
           Padding(
@@ -54,33 +57,68 @@ final _tyreModel=_controller.tyresList[index];
                 padding: const EdgeInsets.symmetric(vertical: 10),
                 child: Column(
                   children: [
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              type,
-                              style: StyledText.titleBolds,
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
+                    _addRow(type,tyreModel.type),
+                    _addRow(rimWidth,tyreModel.wheel.rimWidth.toString()),
+                         _addRow(rimDimeter,tyreModel.wheel.rimDimeter.toString()),
+                    _addRow(rimOffset,tyreModel.wheel.rimOffset.toString()),
+                    columSizedBox,
+
+                    Container(child: Text(tyreModel.description??""),)
+                    // Row(
+                    //   crossAxisAlignment: CrossAxisAlignment.start,
+                    //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    //   children: [
+                    //     Column(
+                    //       crossAxisAlignment: CrossAxisAlignment.start,
+                    //       children: [
+                    //         Text(
+                    //           type,
+                    //           style: StyledText.titleBolds,
+                    //         ),
+                    //         SizedBox(
+                    //           height: 10,
+                    //         ),
                     
-                          ],
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(tyreModel.type),
+                    //       ],
+                    //     ),
+                    //     Column(
+                    //       crossAxisAlignment: CrossAxisAlignment.start,
+                    //       children: [
+                    //         Text(tyreModel.type),
                           
                       
-                          ],
-                        ),
-                      ],
-                    ),
+                    //       ],
+                    //     ),
+                    //   ],
+                    // ),
+                    // Row(
+                    //   crossAxisAlignment: CrossAxisAlignment.start,
+                    //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    //   children: [
+                    //     Column(
+                    //       crossAxisAlignment: CrossAxisAlignment.start,
+                    //       children: [
+                    //         Text(
+                    //           type,
+                    //           style: StyledText.titleBolds,
+                    //         ),
+                    //         SizedBox(
+                    //           height: 10,
+                    //         ),
+                    
+                    //       ],
+                    //     ),
+                    //     Column(
+                    //       crossAxisAlignment: CrossAxisAlignment.start,
+                    //       children: [
+                    //         Text(tyreModel.type),
+                          
+                      
+                    //       ],
+                    //     ),
+                    //   ],
+                    // ),
+                    ,
                     ButtonBar(
                       children: [
                         IconButton(
@@ -108,5 +146,36 @@ final _tyreModel=_controller.tyresList[index];
     );
   }
 
+_addRow(String title, String value){
 
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 15),
+    child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            children: [
+                              Text(
+                                title.capitalizeFirst??"",
+                                style: StyledText.titleBolds,
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                      
+                            ],
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(value),
+                            
+                        
+                            ],
+                          ),
+                        ],
+                      ),
+  );
+}
 }

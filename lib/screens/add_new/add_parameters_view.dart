@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 
@@ -22,7 +24,7 @@ class AddParametersView extends StatelessWidget {
       child: Scaffold(
           appBar: AppBar(
             backgroundColor: Theme.of(context).primaryColor,
-            title: Text("Entry Form"),
+            title: Text("parameters".capitalize!),
           ),
           body: SingleChildScrollView(
             child: Container(
@@ -33,7 +35,18 @@ class AddParametersView extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Row(
+
+
+                  GetBuilder<AddParametersController>(
+                    builder:(controller)=> _controller.imageFile==null?Text("NO IMAGE SELECTED"):Image.file(File(_controller.imageFile!.path),width: Get.width,
+                    
+                    height: 120,
+                    
+                    fit: BoxFit.cover,),
+                  ),
+
+                  columSizedBox
+,                    Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                      
@@ -68,9 +81,7 @@ class AddParametersView extends StatelessWidget {
                      
                       ],
                     ),
-                    SizedBox(
-                      height: 10,
-                    ),
+                   columSizedBox,
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -99,9 +110,8 @@ class AddParametersView extends StatelessWidget {
                                 hintText: rimWidthHintText))
                       ],
                     ),
-                    SizedBox(
-                      height: 10,
-                    ),
+                                     columSizedBox,
+
               
                          Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -130,7 +140,29 @@ class AddParametersView extends StatelessWidget {
                                 items: _controller.rimDimetersValues,
                                 hintText: offsetHintText))
                       ],
+
                     ),
+
+                    columSizedBox,
+                      Container(
+                        width:Get.width*0.5,
+                        
+                        child: MyButton(buttonText: 'Add Photo',onTap: (){
+
+
+                          _controller.pickProfileImage();
+                        },icon: Icon(Icons.add_a_photo),)),
+                    columSizedBox,
+
+        Container(
+          height: 50,
+                        width:Get.width,
+                        
+                        child: MyButton(buttonText:continueText,onTap: (){
+
+
+                         Get.snackbar("Added", "parameters added successfully",snackPosition: SnackPosition.BOTTOM);
+                        })),
                   ],
                 ),
               ),

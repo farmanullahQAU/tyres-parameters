@@ -31,6 +31,8 @@ const String rimDimeter = "rim Dimeter";
 const String home = "Home";
 const String search = "Search";
 const String addNew = "New";
+const String settings = "Settings";
+
 
 //entryform  error messages
 
@@ -43,16 +45,19 @@ const String rimBrandEmptyErrorMessage = "Select rim brand";
 const String rimDescriptionEmptyErrorMessage = "Add description";
 //entryform  hint text
 
-const String dimeterHintText = "Dimeter...";
+const String dimeterHintText = "Dimeter";
 
 const String pricerHintText = "Price...";
 
-const String rimWidthHintText = "Rim width...";
+const String rimWidthHintText = "width";
 
-const String offsetHintText = "Offset...";
-const String brandHintText = "Brand...";
+const String offsetHintText = "Offset";
+const String brandHintText = "Brand";
 
 const String descriptionHintText = "Descriptions...";
+const String continueText = "CONTINUE";
+
+
 
  const Widget columSizedBox= SizedBox(
                 height: 20,

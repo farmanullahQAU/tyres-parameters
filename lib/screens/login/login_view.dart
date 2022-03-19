@@ -80,6 +80,7 @@ class Loginview extends StatelessWidget {
                         height: 14,
                       ),
                       TxtField(
+                        obsecure: true,
                         prefixIcon: Icon(Icons.lock),
                         isOutlined: true,
                         labelText: "Passsword",
@@ -92,7 +93,7 @@ class Loginview extends StatelessWidget {
                         child: MyButton(buttonText: login, onTap: () {
 
 
-                          Get.to(()=>TabsView(),
+                          Get.off(()=>TabsView(),
                           
                           transition: Transition.zoom,
                           
@@ -148,9 +149,9 @@ class Loginview extends StatelessWidget {
                           children: [
                             TextSpan(
                               recognizer: new TapGestureRecognizer()..onTap = () => Get.to(SignupView()),
-                                text: "Signup",
-                                style: AppTheme.orangeTheme.textTheme.subtitle1
-                                    ?.copyWith(color: Theme.of(context).primaryColor))
+                                text: signup,
+                                style: Theme.of(context).textTheme.subtitle1?.copyWith(color: Colors.blue)
+                                   )
                           ]),
                     ),
                   ),

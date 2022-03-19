@@ -4,6 +4,7 @@ import '../constants/constants.dart';
 
 class TxtField extends StatelessWidget {
   Icon? suffixIcon;
+  bool obsecure;
   Icon? prefixIcon;
   String? hintText;
   String? labelText;
@@ -20,6 +21,7 @@ class TxtField extends StatelessWidget {
   TxtField(
       {Key? key,
       this.isReadOnly=false,
+      this.obsecure=false,
       this.suffixIcon,
       this.prefixIcon,
       this.labelText,
@@ -38,7 +40,7 @@ class TxtField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       
-      
+      obscureText: obsecure,
       readOnly: isReadOnly!,
       keyboardType: TextInputType.multiline,
 

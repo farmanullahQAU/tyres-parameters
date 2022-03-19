@@ -1,6 +1,7 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:parametric_market_app/constants/theme.dart';
 import 'package:parametric_market_app/pages.dart';
@@ -46,10 +47,20 @@ class Splash extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedSplashScreen(
-        splash: Image.asset('images/logo.png'),
-        duration: 2000,
-        splashIconSize: 200,
-        nextScreen: Loginview());
+    return Scaffold(
+      backgroundColor: Theme.of(context).backgroundColor,
+      body: AnimatedSplashScreen(
+          splash: Stack(
+            clipBehavior: Clip.none,
+            children: [
+              SvgPicture.asset('images/tyre.svg',width: 100,),
+              Positioned(top:60,child: SvgPicture.asset('images/rim.svg',width: 120,)),
+    
+            ],
+          ),
+          duration: 2000,
+          splashIconSize: 200,
+          nextScreen: Loginview()),
+    );
   }
 }
