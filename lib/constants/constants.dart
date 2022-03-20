@@ -23,10 +23,12 @@ const String tyreSession = "tyre Session";
 const String description = "description";
 
 //wheel
-const String rimWidth = "rim Width";
-const String rimOffset = "rim Offset";
-const String rimBrand = "rim Brand";
-const String rimDimeter = "rim Dimeter";
+const String rimWidth = "Width";
+const String rimOffset = "Offset";
+const String rimBrand = "Brand";
+const String rimDimeter = "Dimeter";
+const String condition = "condition";
+
 //bottom navigation bar item labels
 const String home = "Home";
 const String search = "Search";
@@ -56,6 +58,9 @@ const String brandHintText = "Brand";
 
 const String descriptionHintText = "Descriptions...";
 const String continueText = "CONTINUE";
+//conditions
+
+
 
 
 
@@ -64,6 +69,13 @@ const String continueText = "CONTINUE";
               );
 
 
+ const Widget tenHeightSizedBox= SizedBox(
+                height: 10,
+              );
+
+ const Widget eightWidthSizedBox= SizedBox(
+                width: 8,
+              );
 
 const drawerColor = Color.fromARGB(255, 100, 69, 56);
 

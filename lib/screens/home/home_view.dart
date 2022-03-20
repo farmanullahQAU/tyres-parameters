@@ -64,60 +64,7 @@ final _tyreModel=_controller.tyresList[index];
                     columSizedBox,
 
                     Container(child: Text(tyreModel.description??""),)
-                    // Row(
-                    //   crossAxisAlignment: CrossAxisAlignment.start,
-                    //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    //   children: [
-                    //     Column(
-                    //       crossAxisAlignment: CrossAxisAlignment.start,
-                    //       children: [
-                    //         Text(
-                    //           type,
-                    //           style: StyledText.titleBolds,
-                    //         ),
-                    //         SizedBox(
-                    //           height: 10,
-                    //         ),
-                    
-                    //       ],
-                    //     ),
-                    //     Column(
-                    //       crossAxisAlignment: CrossAxisAlignment.start,
-                    //       children: [
-                    //         Text(tyreModel.type),
-                          
-                      
-                    //       ],
-                    //     ),
-                    //   ],
-                    // ),
-                    // Row(
-                    //   crossAxisAlignment: CrossAxisAlignment.start,
-                    //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    //   children: [
-                    //     Column(
-                    //       crossAxisAlignment: CrossAxisAlignment.start,
-                    //       children: [
-                    //         Text(
-                    //           type,
-                    //           style: StyledText.titleBolds,
-                    //         ),
-                    //         SizedBox(
-                    //           height: 10,
-                    //         ),
-                    
-                    //       ],
-                    //     ),
-                    //     Column(
-                    //       crossAxisAlignment: CrossAxisAlignment.start,
-                    //       children: [
-                    //         Text(tyreModel.type),
-                          
-                      
-                    //       ],
-                    //     ),
-                    //   ],
-                    // ),
+               
                     ,
                     ButtonBar(
                       children: [

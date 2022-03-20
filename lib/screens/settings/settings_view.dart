@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import 'package:parametric_market_app/constants/constants.dart';
 import 'package:parametric_market_app/screens/settings/settings_controller.dart';
 
+import '../../constants/theme.dart';
+
 class SettingsView extends StatelessWidget {
   final _settingsController =Get.find<SettingsController>();
    SettingsView({Key? key}) : super(key: key);
@@ -31,7 +33,15 @@ class SettingsView extends StatelessWidget {
                              ),
                  ),
  ),
+ IconButton(
 
+   onPressed: (){
+
+    Get.changeTheme(AppTheme.orangeTheme);
+
+   },
+   icon: Text("kkkkk")
+ ),
       ],),
     ));
   }

@@ -33,9 +33,15 @@ class Self extends StatelessWidget {
 
       initialRoute: RouteNames.SPLASH,
       getPages: pages,
-      darkTheme: ThemeData.dark(),
+
+       //if we need default text dark theme use this 
+      // darkTheme: ThemeData.dark(),
+
+      //change dark theme accoring to your need use this
+       darkTheme:AppTheme. darkCustomTheme,
+
       themeMode: ThemeMode.system,
-      theme: AppTheme.orangeTheme,
+      theme: AppTheme.blueTheme,
 
       debugShowCheckedModeBanner: false,
     );
